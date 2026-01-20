@@ -1,6 +1,16 @@
-ultralytics
-opencv-python
-numpy
-pandas
-matplotlib
-Pillow
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# YOLO
+runs/
+*.pt
+
+# Data
+dataset/
+data/train/
+data/val/
+data/test/
