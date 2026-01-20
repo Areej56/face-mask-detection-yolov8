@@ -1,4 +1,6 @@
-opencv-python
 ultralytics
+opencv-python
 numpy
-
+pandas
+matplotlib
+Pillow
