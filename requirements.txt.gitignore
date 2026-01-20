@@ -1,5 +1,6 @@
-__pycache__/
-.env
-*.mp4
-*.jpg
-
+ultralytics
+opencv-python
+numpy
+pandas
+matplotlib
+Pillow
