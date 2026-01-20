@@ -1,56 +1,97 @@
-# Smart Scene Analyzer
+# Face Mask Detection using YOLOv8 😷
 
-A professional Computer Vision project that performs object detection and segmentation
-on images using YOLOv8 and OpenCV.
+## Overview
+This project implements a real-time **Face Mask Detection System** using **YOLOv8**.
+The model detects and classifies faces into the following categories:
+- Without Mask
+- With Mask
+- Mask Worn Incorrectly
 
-## 🔍 Features
-- Object Detection using YOLOv8
-- Semantic Segmentation
-- Image processing with OpenCV
-- Modular & clean code structure
+The system is trained on a custom dataset converted from **Pascal VOC (XML)** format to **YOLO format** and supports inference on images, videos, and real-world data.
 
-## 🛠 Tech Stack
-- Python
-- OpenCV
-- YOLOv8
-- PyTorch
+---
 
-## 📂 Project Structure
-smart-scene-analyzer/
+## Project Highlights
+- Custom dataset preprocessing and annotation handling
+- XML (Pascal VOC) → YOLO format conversion
+- YOLOv8-based multi-class object detection
+- Train / Validation / Test dataset splitting
+- Real-world image inference
+- Clean and modular project structure
+
+---
+
+## Tech Stack
+- **Python**
+- **YOLOv8 (Ultralytics)**
+- **PyTorch**
+- **OpenCV**
+- **NumPy**
+- **Matplotlib**
+- **Pillow**
+
+---
+
+## Dataset
+The dataset contains face images annotated with bounding boxes and labels:
+- `without_mask`
+- `with_mask`
+- `mask_weared_incorrect`
+
+Annotations were originally in XML format and converted to YOLO format for training.
+
+> ⚠️ Note: Full dataset is not included in this repository.  
+> Only sample images are provided for demonstration.
+
+---
+
+## Project Structure
+face-mask-detection-yolov8/
 │
 ├── data/
-│   ├── images/
-│   │   └── sample.jpg
-│   └── videos/
-│       └── sample.mp4
+│ └── data.yaml
 │
-├── models/
-│   └── yolov8n.pt
+├── dataset/
+│ └── sample_images/
 │
 ├── src/
-│   ├── detect.py
-│   ├── segment.py
-│   └── utils.py
+│ ├── xml_to_yolo.py
+│ ├── split_dataset.py
+│ ├── train.py
+│ └── predict.py
 │
-├── outputs/
-│   ├── images/
-│   └── videos/
+├── results/
+│ └── results.png
 │
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+---
 
-## ▶️ How to Run
+## Installation
 ```bash
 pip install -r requirements.txt
-python src/detect.py
-python src/segment.py
 
-📸 Output
+Training the Model
+python src/train.py
 
-Detection and segmentation results are saved in the outputs/ folder.
+The trained weights will be saved automatically in:
 
-👩‍💻 Author
+runs/detect/train/weights/best.pt
+Inference
+
+Run prediction on sample images:
+
+python src/predict.py
+Results
+
+Example detection results:
+
+Author
 
 Areej Arslan
 Machine Learning & Computer Vision Engineer (Entry-Level)
+
+License
+
+This project is for educational and research purposes.
