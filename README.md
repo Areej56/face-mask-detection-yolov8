@@ -87,11 +87,12 @@ Results
 
 Example detection results:
 
-##Author
 
-##Areej Arslan
+Auther
+
+Areej Arslan
 Machine Learning & Computer Vision Engineer (Entry-Level)
 
-##License
+License
 
 This project is for educational and research purposes.
